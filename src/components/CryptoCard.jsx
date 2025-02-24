@@ -8,11 +8,11 @@ const CryptoCard = ({ coin }) => {
   const isFavorite = favorites.includes(coin.id);
 
   return (
-    <div className="border p-4 rounded-lg shadow-md bg-white dark:bg-gray-800">
-      <h2 className="text-xl font-bold">
+    <div className="border p-4 rounded-lg shadow-md bg-white dark:bg-gray-900">
+      <h2 className="text-xl font-bold dark:text-white">
         {coin.name} ({coin.symbol.toUpperCase()})
       </h2>
-      <p>Price: ${coin.current_price}</p>
+      <p className="dark:text-white">Price: ${coin.current_price}</p>
       <button
         className={`mt-2 px-4 py-2 rounded ${
           isFavorite ? "bg-red-500" : "bg-blue-500"
